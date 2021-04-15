@@ -1,9 +1,8 @@
 import SideBar from "./sidebar";
 
 function App() {
-  const heightSize = window.innerHeight
   return (
-    <div className="App" style={{height:`${heightSize}px`, backgroundColor:"#f0eeee"}}>
+    <div className="App" style={{backgroundColor:"#f0eeee"}}>
       <SideBar></SideBar>
     </div>
   );
