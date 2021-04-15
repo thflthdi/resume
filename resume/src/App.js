@@ -2,7 +2,9 @@ import SideBar from "./sidebar";
 
 function App() {
   return (
-    <div className="App" style={{backgroundColor:"#f0eeee"}}>
+    <div className="App" 
+    // style={{backgroundColor:"#f0eeee"}}
+    >
       <SideBar></SideBar>
     </div>
   );
