@@ -1,5 +1,6 @@
 .app {
   display: grid;
+  gap: 1px;
   grid-template-columns: 1fr 2fr 5fr 1fr;
   grid-template-areas: ". sidebar content .";
   //   background-color: lightyellow;
@@ -24,10 +25,11 @@
 @media (max-width: 768px) {
   .app {
     display: grid;
+    grid-template-columns: 30px 1fr 1fr 30px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "sidebar sidebar sidebar sidebar"
-      "content content content content";
+      ". sidebar sidebar ."
+      ". content content .";
     //   background-color: lightyellow;
     //   border: 3px solid #333;
     width: 1280px;
