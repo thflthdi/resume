@@ -1,0 +1,112 @@
+.main {
+  .container {
+    color: #4a4b4b;
+    margin-top: 20px;
+    img {
+      display: block;
+      margin: auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 7px solid white;
+    }
+    .menutitle {
+      background-color: #4a4b4b;
+      color: white;
+      text-align: center;
+      letter-spacing: 5px;
+      padding: 6px;
+    }
+    .bt-container {
+      margin-top: 10px;
+    }
+    .list-container {
+      margin-top: 5px;
+    }
+    button {
+      color: white;
+      background-color: #4a4b4b;
+      border: 0px;
+      width: 30px;
+      height: 30px;
+    }
+    #icon {
+      width: 14px;
+      height: 14px;
+      margin-bottom: 3px;
+    }
+  }
+  #down-btn {
+    text-align: center;
+    background-color: white;
+    cursor: hand;
+    border: 1.5px solid #4a4b4b;
+    width: 250px;
+    height: 35px;
+    color: #4a4b4b;
+    letter-spacing: 5px;
+    padding: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    .container {
+      //   border: 1.5px solid blue;
+      margin-top: 10px;
+      text-align: center;
+      color: #4a4b4b;
+      img {
+        display: block;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+      }
+      .menutitle {
+        display: none;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+      .bt-container {
+        margin: 0px 2px 0px 2px;
+      }
+
+      .list-container {
+        margin-top: 5px;
+      }
+      button {
+        margin: auto;
+        color: white;
+        background-color: #4a4b4b;
+        border: 0px;
+        width: 30px;
+        height: 30px;
+      }
+      #icon {
+        width: 14px;
+        height: 14px;
+        margin-bottom: 3px;
+      }
+      span {
+        display: none;
+      }
+    }
+    #down-btn {
+      text-align: center;
+      background-color: white;
+      cursor: hand;
+      border: 1.5px solid #4a4b4b;
+      width: 250px;
+      height: 35px;
+      color: #4a4b4b;
+      letter-spacing: 5px;
+      padding: auto;
+    }
+  }
+}

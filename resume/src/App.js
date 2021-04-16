@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import About from "./components/about";
 import SideBar from "./sidebar";
 import { Container,Row,Col } from 'react-bootstrap';
+import "./App.scss"
 
 const ResizeEffect = () => {
   const [height, setHeight] = useState(window.innerHeight);
@@ -26,12 +27,22 @@ const ResizeEffect = () => {
 function App() {
   const heightSize = ResizeEffect();
   return (
-      <Container fluid>
-        <Row>
-          <Col className="sidebar" md={{span:3, offset:1}} xs={12} style={{backgroundColor:"#dfdfdf", maxWidth:"300px"}}><SideBar/></Col>
-          <Col md={7} xs={12} style={{backgroundColor:"blue"}}><About/></Col>
-        </Row>
-      </Container>
+
+    <div className="app">
+      <div className="sidebar">
+        <SideBar></SideBar>
+      </div>
+      <div className="content">
+        <About></About>
+      </div>
+    </div>
+
+      // <Container fluid>
+      //   <Row>
+      //     <Col className="sidebar" md={{span:3, offset:1}} xs={12} style={{backgroundColor:"#dfdfdf", maxWidth:"300px"}}><SideBar/></Col>
+      //     <Col md={7} xs={12} style={{backgroundColor:"blue"}}><About/></Col>
+      //   </Row>
+      // </Container>
   );
 }
 
