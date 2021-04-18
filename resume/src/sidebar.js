@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./sidebar.scss"
 import imagefile from './ssulss.jpg';
 import {TelephoneFill, EnvelopeFill, Github} from 'react-bootstrap-icons';
@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 
 
 function SideBar() {
+
+    const onLinked=(e)=>{
+        e.target.className = "linked"
+        for(let list of document.getElementsByClassName("linked")){
+                if(list.href!==e.target.href){
+                    list.className = "list-link"
+                }
+            }
+    }
 
     return(
         <div className="main">
@@ -31,16 +40,16 @@ function SideBar() {
             <div className="container" >
                 <div className="menutitle">List</div>
                 <div className="list-container">
-                    <Link to="/">About</Link>
+                    <Link className="list-link" onClick={onLinked} to="/">About</Link>
                 </div>
                 <div className="list-container">
-                <Link to="/skill">Skill</Link>
+                <Link className="list-link" onClick={onLinked} to="/skill">Skill</Link>
                 </div>
                 <div className="list-container">
-                <Link to="/project">Project</Link>
+                <Link className="list-link" onClick={onLinked} to="/project">Project</Link>
                 </div>
                 <div className="list-container">
-                <Link to="/education">Education</Link>
+                <Link className="list-link" onClick={onLinked} to="/education">Education</Link>
                 </div>
             </div>
             <div className="container">

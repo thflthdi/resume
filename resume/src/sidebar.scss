@@ -23,6 +23,18 @@
     }
     .list-container {
       margin-top: 5px;
+      text-align: center;
+      .list-link {
+        color: #4a4b4b;
+      }
+      .list-link:hover {
+        text-decoration-color: white;
+      }
+      .linked {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
     }
     button {
       color: white;

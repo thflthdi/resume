@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import About from "./components/about";
 import SideBar from "./sidebar";
-import { Container,Row,Col } from 'react-bootstrap';
 import "./App.scss"
 import { Route } from "react-router-dom";
 import Skill from "./components/skill";
