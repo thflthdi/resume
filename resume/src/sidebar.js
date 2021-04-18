@@ -2,6 +2,7 @@ import React from 'react';
 import "./sidebar.scss"
 import imagefile from './ssulss.jpg';
 import {TelephoneFill, EnvelopeFill, Github} from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 
 
 function SideBar() {
@@ -30,16 +31,16 @@ function SideBar() {
             <div className="container" >
                 <div className="menutitle">List</div>
                 <div className="list-container">
-                    About
+                    <Link to="/">About</Link>
                 </div>
                 <div className="list-container">
-                    Skill
+                <Link to="/skill">Skill</Link>
                 </div>
                 <div className="list-container">
-                    Project
+                <Link to="/project">Project</Link>
                 </div>
                 <div className="list-container">
-                    Education
+                <Link to="/education">Education</Link>
                 </div>
             </div>
             <div className="container">

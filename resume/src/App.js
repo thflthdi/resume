@@ -3,6 +3,10 @@ import About from "./components/about";
 import SideBar from "./sidebar";
 import { Container,Row,Col } from 'react-bootstrap';
 import "./App.scss"
+import { Route } from "react-router-dom";
+import Skill from "./components/skill";
+import Project from "./components/project";
+import Education from "./components/education";
 
 const ResizeEffect = () => {
   const [height, setHeight] = useState(window.innerHeight);
@@ -33,7 +37,10 @@ function App() {
         <SideBar></SideBar>
       </div>
       <div className="content">
-        <About></About>
+          <Route exact path="/" component={About}/>
+          <Route path="/skill" component={Skill}/>
+          <Route path="/project" component={Project}/>
+          <Route path="/education" component={Education}/>
       </div>
     </div>
 
