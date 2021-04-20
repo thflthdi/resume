@@ -1,10 +1,9 @@
 import React from 'react';
-
+import "./about.scss"
 function About(){
-
     return(
-        <div>
-            hello
+        <div className="content_container">
+            About
         </div>
     )
 }

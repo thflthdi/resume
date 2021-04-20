@@ -7,28 +7,29 @@ import Skill from "./components/skill";
 import Project from "./components/project";
 import Education from "./components/education";
 
-const ResizeEffect = () => {
-  const [height, setHeight] = useState(window.innerHeight);
+// const ResizeEffect = () => {
+//   const [height, setHeight] = useState(window.innerHeight);
 
-  const onResize = () => {
-    setHeight(window.innerHeight);
-  };
+//   const onResize = () => {
+//     setHeight(window.innerHeight);
+//   };
 
-  useEffect(() => {
-    window.addEventListener('resize', onResize);
-    //EventListener의 인자(이벤트명, 콜백 함수 - 이벤트가 발생되면 실행, useCapture - 이벤트 버블링이나 캡처링을 사용할지)
+//   useEffect(() => {
+//     window.addEventListener('resize', onResize);
+//     //EventListener의 인자(이벤트명, 콜백 함수 - 이벤트가 발생되면 실행, useCapture - 이벤트 버블링이나 캡처링을 사용할지)
 
-    return () => {
-      //이벤트 제거
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
+//     return () => {
+//       //이벤트 제거
+//       window.removeEventListener('resize', onResize);
+//     };
+//   }, []);
 
-  return height;
-};
+//   return height;
+// };
 
 function App() {
-  const heightSize = ResizeEffect();
+  // const heightSize = ResizeEffect();
+
   return (
 
     <div className="app">
