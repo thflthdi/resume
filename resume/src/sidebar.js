@@ -15,7 +15,25 @@ import { Link } from 'react-router-dom';
     //     }
 function SideBar() {
 
-    // FIXME: 기존 코드는 url로 접근시 해당 메뉴 list가 active 되지 않음
+    useEffect(()=>{
+        for(let list of document.getElementsByName("list-linked")){
+        if(list.href===document.location.href){
+            list.className = "linked"
+        }
+        else{
+            list.className = "list-link"
+        }
+    }
+    },[])
+
+    const onLinked=(e)=>{
+        e.target.className = "linked"
+        for(let list of document.getElementsByClassName("linked")){
+                if(list.href!==e.target.href){
+                    list.className = "list-link"
+                }
+            }
+    }
 
     return(
         <div className="main">
@@ -41,16 +59,16 @@ function SideBar() {
             <div className="container" >
                 <div className="menutitle">List</div>
                 <div className="list-container">
-                    <Link className="list-link" name="list-linked" to="/">About</Link>
+                    <Link className="list-link" name="list-linked" onClick={onLinked} to="/">About</Link>
                 </div>
                 <div className="list-container">
-                <Link className="list-link"  name="list-linked" to="/skill">Skill</Link>
+                <Link className="list-link"  name="list-linked" onClick={onLinked} to="/skill">Skill</Link>
                 </div>
                 <div className="list-container">
-                <Link className="list-link"  name="list-linked" to="/project">Project</Link>
+                <Link className="list-link"  name="list-linked" onClick={onLinked} to="/project">Project</Link>
                 </div>
                 <div className="list-container">
-                <Link className="list-link"  name="list-linked" to="/education">Education</Link>
+                <Link className="list-link"  name="list-linked" onClick={onLinked} to="/education">Education</Link>
                 </div>
             </div>
             <div className="container">
